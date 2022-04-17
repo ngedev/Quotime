@@ -18,9 +18,11 @@ class SplashActivity : AppCompatActivity() {
 
         val quote = QuoteDatabase.getDatabase(applicationContext).quoteDao().getRandomQuote()
 
-        binding.tvRandomQuotes.text = quote.quotes
-        if(quote.author.isNotEmpty()){
-            binding.tvAuthor.text = "- ${quote.author}"
+        if(quote != null){
+            binding.tvRandomQuotes.text = quote.quotes
+            if(quote.author.isNotEmpty()){
+                binding.tvAuthor.text = "- ${quote.author}"
+            }
         }
 
         Handler(mainLooper).postDelayed({
