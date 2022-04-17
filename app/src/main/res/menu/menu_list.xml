@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menuAdd"
+        android:title="Add Quote"
+        android:icon="@drawable/i_add"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/menuSetting"
+        android:title="Setting"
+        app:showAsAction="never"/>
+
+</menu>

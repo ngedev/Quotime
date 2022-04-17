@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listQuotesFragment">
+    <fragment
+        android:id="@+id/listQuotesFragment"
+        android:name="com.ngedev.quotime.ui.list.ListQuotesFragment"
+        android:label="List Quotes">
+        <action
+            android:id="@+id/action_listQuotesFragment_to_viewQuotesFragment"
+            app:destination="@id/viewQuotesFragment" />
+        <action
+            android:id="@+id/action_listQuotesFragment_to_addEditFragment"
+            app:destination="@id/addEditFragment" />
+        <action
+            android:id="@+id/action_listQuotesFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewQuotesFragment"
+        android:name="com.ngedev.quotime.ui.viewquotes.ViewQuotesFragment"
+        android:label="View Random Quote">
+        <action
+            android:id="@+id/action_viewQuotesFragment_to_addEditFragment"
+            app:destination="@id/addEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditFragment"
+        android:name="com.ngedev.quotime.ui.addedit.AddEditFragment"
+        android:label="Add Quote">
+        <action
+            android:id="@+id/action_addEditFragment_to_listQuotesFragment"
+            app:destination="@id/listQuotesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.ngedev.quotime.ui.setting.SettingFragment"
+        android:label="Setting" />
+</navigation>
